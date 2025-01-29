@@ -1,0 +1,31 @@
+.nav-container {
+  background-color: rgba(209, 153, 115, 0.5);
+  height: 50px;
+  justify-content: center;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 25%;
+  margin-right: 25%;
+  list-style-type: none;
+}
+
+li {
+  margin-top: 12px;
+  width: 80px;
+  font-size: 18px;
+}
+li a:hover {
+  border-bottom: 1px solid rgb(167, 49, 16);
+  font-weight: 200;
+  transition: width 0.3s ease;
+}
+
+li a.active {
+  border-bottom: 1px solid rgb(167, 49, 16);
+  font-weight: 600;
+}

@@ -1,0 +1,219 @@
+.book-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.book-item {
+  flex: 0 1 26%;
+  margin: 3%;
+  height: 100px;
+  border: 1px solid rgb(100, 45, 156);
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.book-item:hover {
+  box-shadow: 4px 4px 8px rgba(255, 250, 20, 0.8),
+    -4px -4px 8px rgba(255, 250, 20, 0.3);
+}
+
+/* .book-content{
+    display: flex;
+}
+
+.book-label, .value-field{
+    flex: 1;
+    display: flex;
+}
+
+.value-field{
+    float: left;
+}
+
+.book-content{
+    input{
+        width: 100%;
+    }
+}
+
+.book-label{
+    float: left;
+    width: 40%;
+} */
+
+.book-content {
+  display: flex; /* Align label and input side-by-side */
+  align-items: center; /* Vertically center items */
+  gap: 10px; /* Space between label and input */
+  margin-bottom: 16px; /* Space between rows */
+  flex-direction: column;
+}
+
+.book-label {
+  font-size: 16px; /* Adjust label text size */
+  font-weight: bold; /* Make the label stand out */
+  color: #333; /* Neutral dark color */
+  width: 100px; /* Fixed width for alignment */
+}
+
+.value-field {
+  /* flex: 1;  */
+  padding: 8px 12px; /* Comfortable padding */
+  border: 1px solid #ccc; /* Subtle border */
+  border-radius: 4px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background */
+  color: #555; /* Neutral text color */
+  font-size: 16px;
+}
+
+.value-field[readonly] {
+  background-color: #e9ecef; /* Slightly different background for readonly */
+  cursor: not-allowed; /* Indicate it's not editable */
+}
+.genre-item {
+    display: block;
+   
+    
+}
+
+@media (max-width: 768px) {
+  .book-content {
+    flex-direction: column; /* Stack label and input */
+    align-items: stretch; /* Full-width inputs */
+  }
+
+  .book-label {
+    width: auto; /* No fixed width */
+    margin-bottom: 4px; /* Space below label */
+  }
+}
+
+.user-profile{
+  margin-top: 10%;
+}
+
+.user-details{
+  margin: 2%;
+  display: flex;
+  max-width: 100%;
+  justify-content: center;
+  text-align: left;
+}
+
+label{
+  width: 10%;
+  margin-top: 0.7%;
+}
+
+input{
+  margin-left: 2%;
+  padding: 10px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 1px solid rgb(207, 193, 193);
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: not-allowed;
+}
+
+.logOut-button{
+  width: 8%;
+  font-size: 15px;
+  padding: 15px;
+  background-color: rgba(213, 0, 0, 0.71);
+  color: white;
+  border-radius: 8px;
+}
+.logOut-button:hover{
+  background-color: rgb(213, 22, 22);
+  color: wheat;
+}
+
+.form-container{
+  margin-top: 8%;
+}
+
+.form-header{
+  border-bottom: 1px solid;
+  margin-left: 40%;
+  width: 20%;
+
+  h2{
+    font-weight: 700;
+    font-size: 30px;
+  }
+}
+
+.input-container{
+  margin: 2%;
+  max-width: 20%;
+  border: 1px solid rgb(165, 153, 153);
+  border-radius: 8px;
+  margin-left: 40%;
+}
+.input-field{
+  border: none;
+  outline: none;
+  cursor:text;
+  text-align: left;
+  justify-content: space-between;
+  margin-left: 5%;
+}
+
+
+span{
+  margin-left: -6%;
+}
+
+.submit-btn{
+  width: 20%;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid black;
+  font-size: 15px;
+  background-color: rgba(36, 202, 24,0.7);
+}
+
+.purchases{
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  border: 1px solid;
+  margin: 2%;
+  border-radius: 8px;
+  background-color: rgba(223, 127, 127, 0.4);
+}
+
+.purchases-header{
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 2%;
+
+  li{
+    margin-left: 7%;
+    width: 400px;
+    text-align: left;
+    height: 50px;
+
+  }
+}
+
+.purchases{
+  li{
+    margin-left: 7%;
+    width: 400px;
+    text-align: left;
+    height: 50px;
+
+    .extend-btn{
+      width: 150px;
+      height: 40px;
+      font-size: 15px;
+      border-radius: 8px;
+      background-color: rgb(148, 198, 132);
+    }
+   
+  }
+
+}
