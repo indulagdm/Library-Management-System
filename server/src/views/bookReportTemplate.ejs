@@ -1,0 +1,124 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- <title><%=title%></title> -->
+  <style>
+    /* body { font-family: Arial, sans-serif; margin: 20px; }
+    h1 { color: #333; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { padding: 8px; text-align: left; border: 1px solid #ddd; } */
+
+    body {
+        margin: 1.5rem;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .container-left,
+      .container-right {
+        flex: 1;
+        box-sizing: border-box;
+        min-width: 300px;
+        padding: 5px;
+      }
+      .container-left {
+        width: 1280px;
+      }
+      .container-right {
+        width: 1280px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .table-container {
+        padding: 5px;
+      }
+      table {
+        width: 80%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+        border: 1px solid;
+        width: 120px;
+        height: 1rem;
+      }
+      th {
+        background-color: rgba(95, 112, 208, 0.7);
+      }
+      .container-right-img {
+        width: 150px;
+        margin-left: 100px;
+      }
+      .container-heading-h1 {
+        margin-left: 40%;
+        margin-top: 5%;
+      }
+      .container-right-details-side {
+        width: 40%;
+      }
+      .container-right-p {
+        margin-top: 20%;
+        margin-left: 5%;
+        font-weight: 500;
+      }
+      .generated-date {
+        float: right;
+        margin-right: 10%;
+        margin-top: 2%;
+      }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="container-left">
+      <h1 class="container-heading-h1">Book Details</h1>
+    </div>
+    <div class="container-right">
+      <div class="container-right-img-side">
+        <img
+          src="<%=logoPath%>"
+          class="container-right-img"
+          alt="logo"
+        />
+        
+      </div>
+      <div class="container-right-details-side">
+        <p class="container-right-p">Infinity Library Inventory</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>ISBN</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Publication Year</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% books.forEach(report => { %>
+          <tr>
+            <td><%= report.title %></td>
+            <td><%= report.author %></td>
+            <td><%= report.ISBN %></td>
+            <td><%= report.publicationYear %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
